@@ -20,10 +20,13 @@ namespace Perceptrony
 {
     public partial class MainWindow : Window
     {
-        public List<int> example = new List<int>(new int[35]);
+        public List<int> example = new List<int>();
+        public List<int> perceptron = new List<int>();
         public List<List<int>> examples = new List<List<int>>();
         public List<int> answers = new List<int>();
-        public List<double> w = new List<double>();
+        //public List<double> w = new List<double>();
+        double learn_const = 0.1;
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -43,15 +46,32 @@ namespace Perceptrony
                     answers = JsonConvert.DeserializeObject<List<int>>(json);
                 }
             }
+            for (int i = 0; i < 35; i++)
+            {
+                example.Add(-1);
+            }
+            for (int i = 0; i < 10; i++)
+            {
+                perceptron.Add(-1);
+            }
 
-            Weights();
         }
-        private void Weights()
+        public void Weights(List<double> w)
         {
             Random rand = new Random();
-            for(int i = 0; i < 30; i++)
+            for(int i = 0; i < 36; i++)
             {
-                w.Add(rand.NextDouble());
+                w.Add(2 * rand.NextDouble() - 1);
+            }
+        }
+
+        private void Train(List<int> E, int T)
+        {
+            List<double> w = new List<double>();
+            Weights(w);
+            for (int i = 1; i < 37; i++)
+            {
+               ;
             }
         }
         private void ChangeColor(object sender, RoutedEventArgs e)
@@ -66,15 +86,15 @@ namespace Perceptrony
                 bt.Background = Brushes.Transparent;
             }
             int a = Int32.Parse(bt.Tag.ToString()) - 1;
-            if(example[a] == 0)
+            if(example[a] == -1)
             {
                 example[a] = 1;
             }
             else
             {
-                example[a] = 0;
+                example[a] = -1;
             }
-            predictNumber.Content = example[a];
+            predictNumber.Content = $"";
         }
         private void AddExample(object sender, RoutedEventArgs e)
         {

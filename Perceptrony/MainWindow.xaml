@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Perceptrony"
         mc:Ignorable="d"
-        Title="MainWindow" Height="652.8" Width="1348.8" Background="AntiqueWhite">
+        Title="MainWindow" Height="768" Width="1348.8" Background="AntiqueWhite">
     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="597" Margin="10,10,0,0" Grid.RowSpan="7" VerticalAlignment="Top" Width="778" Background="Azure">
         <Grid>
             <Grid.RowDefinitions>
@@ -59,8 +59,8 @@
             <Button Grid.Column="2" Grid.Row="6" Name="b26" Click="ChangeColor" Background="Transparent" Tag="33"/>
             <Button Grid.Column="3" Grid.Row="6" Name="b36" Click="ChangeColor" Background="Transparent" Tag="34"/>
             <Button Grid.Column="4" Grid.Row="6" Name="b46" Click="ChangeColor" Background="Transparent" Tag="35"/>
-            <Label Content="Przewidywana liczba: " Grid.Column="4" HorizontalAlignment="Left" Margin="268.2,15.2,-346,0" Grid.Row="4" VerticalAlignment="Top" Width="233" Height="70" Grid.RowSpan="2" FontSize="24"/>
-            <Label x:Name="predictNumber" Content="Brak" Grid.Column="4" HorizontalAlignment="Left" Margin="506.2,15.2,-428,0" Grid.Row="4" VerticalAlignment="Top" Width="77" Height="70" Grid.RowSpan="2" FontSize="24"/>
+            <Label Content="Przewidywana liczba: " Grid.Column="4" HorizontalAlignment="Left" Margin="171.2,84.4,-247,0" Grid.Row="5" VerticalAlignment="Top" Width="231" Height="70" Grid.RowSpan="2" FontSize="24"/>
+            <Label x:Name="predictNumber" Content="Brak" Grid.Column="4" HorizontalAlignment="Left" Margin="407.2,84.4,-542,0" Grid.Row="5" VerticalAlignment="Top" Width="290" Height="70" Grid.RowSpan="2" FontSize="24"/>
             <Button x:Name="addExampleButton" Background="GreenYellow" Content="Dodaj przykład" Grid.Column="4" HorizontalAlignment="Left" Margin="476.2,28,-497,0" VerticalAlignment="Top" Width="176" Height="40" FontSize="20" Click="AddExample"/>
             <TextBox x:Name="answerBox" Grid.Column="4" HorizontalAlignment="Left" Height="40" Margin="349.2,28,-242,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="48" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24"/>
             <Label Content="Odpowiedź:" Grid.Column="4" HorizontalAlignment="Left" Margin="196.2,28,-189,0" VerticalAlignment="Top" Width="148" Height="40" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
