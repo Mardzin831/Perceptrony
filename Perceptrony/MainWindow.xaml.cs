@@ -21,7 +21,7 @@ namespace Perceptrony
     public partial class MainWindow : Window
     {
         public List<int> example = new List<int>();
-        public List<int> perceptron = new List<int>();
+        public List<List<double>> perceptron = new List<List<double>>();
         public List<List<int>> examples = new List<List<int>>();
         public List<int> answers = new List<int>();
         //public List<double> w = new List<double>();
@@ -52,27 +52,85 @@ namespace Perceptrony
             }
             for (int i = 0; i < 10; i++)
             {
-                perceptron.Add(-1);
+                perceptron.Add(Train(examples, answers, i));
             }
-
         }
-        public void Weights(List<double> w)
+        public List<double> Weights(List<double> w)
         {
             Random rand = new Random();
             for(int i = 0; i < 36; i++)
             {
                 w.Add(2 * rand.NextDouble() - 1);
             }
+            return w;
         }
 
-        private void Train(List<int> E, int T)
+        private List<double> Train(List<List<int>> E, List<int> ans, int perc)
         {
             List<double> w = new List<double>();
-            Weights(w);
-            for (int i = 1; i < 37; i++)
+            w = Weights(w);
+            List<double> pocket = w;
+            Random randE = new Random();
+            int drawn;
+            int T;
+            int O;
+            int ERR;
+            int lifespan = 0;
+            int record = 0;
+
+            int rounds = 0;
+            while (rounds < 100)
             {
-               ;
+                drawn = randE.Next(E.Count());
+                double sum = 0;
+
+                if(ans[drawn] == perc)
+                {
+                    T = 1;
+                }
+                else
+                {
+                    T = -1;
+                }
+
+                for (int i = 1; i < 36; i++)
+                {
+                    sum += w[i] * E[drawn][i - 1];   
+                }
+
+                if(sum < w[0])
+                {
+                    O = -1;
+                }
+                else
+                {
+                    O = 1;
+                }
+
+                ERR = T - O;
+                if(ERR == 0)
+                {
+                    lifespan++;
+                    if(lifespan > record)
+                    {
+                        record = lifespan;
+                        pocket = w;
+                    }
+                }
+                else
+                {
+                    for (int i = 1; i < 36; i++)
+                    {
+                        w[i] += learn_const * ERR * E[drawn][i - 1];
+                    }
+                    w[0] -= learn_const * ERR;
+                    lifespan = 0;
+                }
+                //E.RemoveAt(drawn);
+                //T.RemoveAt(drawn);
+                rounds++;
             }
+            return pocket;
         }
         private void ChangeColor(object sender, RoutedEventArgs e)
         {
