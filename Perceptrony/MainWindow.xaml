@@ -24,46 +24,65 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Grid.Row="0" Name="b00" Click="ChangeColor" Background="Transparent" Tag="1"/>
-            <Button Grid.Column="1" Grid.Row="0" Name="b10" Click="ChangeColor" Background="Transparent" Tag="2"/>
-            <Button Grid.Column="2" Grid.Row="0" Name="b20" Click="ChangeColor" Background="Transparent" Tag="3"/>
-            <Button Grid.Column="3" Grid.Row="0" Name="b30" Click="ChangeColor" Background="Transparent" Tag="4"/>
-            <Button Grid.Column="4" Grid.Row="0" Name="b40" Click="ChangeColor" Background="Transparent" Tag="5"/>
-            <Button Grid.Column="0" Grid.Row="1" Name="b01" Click="ChangeColor" Background="Transparent" Tag="6"/>
-            <Button Grid.Column="1" Grid.Row="1" Name="b11" Click="ChangeColor" Background="Transparent" Tag="7"/>
-            <Button Grid.Column="2" Grid.Row="1" Name="b21" Click="ChangeColor" Background="Transparent" Tag="8"/>
-            <Button Grid.Column="3" Grid.Row="1" Name="b31" Click="ChangeColor" Background="Transparent" Tag="9"/>
-            <Button Grid.Column="4" Grid.Row="1" Name="b41" Click="ChangeColor" Background="Transparent" Tag="10"/>
-            <Button Grid.Column="0" Grid.Row="2" Name="b02" Click="ChangeColor" Background="Transparent" Tag="11"/>
-            <Button Grid.Column="1" Grid.Row="2" Name="b12" Click="ChangeColor" Background="Transparent" Tag="12"/>
-            <Button Grid.Column="2" Grid.Row="2" Name="b22" Click="ChangeColor" Background="Transparent" Tag="13"/>
-            <Button Grid.Column="3" Grid.Row="2" Name="b32" Click="ChangeColor" Background="Transparent" Tag="14"/>
-            <Button Grid.Column="4" Grid.Row="2" Name="b42" Click="ChangeColor" Background="Transparent" Tag="15"/>
-            <Button Grid.Column="0" Grid.Row="3" Name="b03" Click="ChangeColor" Background="Transparent" Tag="16"/>
-            <Button Grid.Column="1" Grid.Row="3" Name="b13" Click="ChangeColor" Background="Transparent" Tag="17"/>
-            <Button Grid.Column="2" Grid.Row="3" Name="b23" Click="ChangeColor" Background="Transparent" Tag="18"/>
-            <Button Grid.Column="3" Grid.Row="3" Name="b33" Click="ChangeColor" Background="Transparent" Tag="19"/>
-            <Button Grid.Column="4" Grid.Row="3" Name="b43" Click="ChangeColor" Background="Transparent" Tag="20"/>
-            <Button Grid.Column="0" Grid.Row="4" Name="b04" Click="ChangeColor" Background="Transparent" Tag="21"/>
-            <Button Grid.Column="1" Grid.Row="4" Name="b14" Click="ChangeColor" Background="Transparent" Tag="22"/>
-            <Button Grid.Column="2" Grid.Row="4" Name="b24" Click="ChangeColor" Background="Transparent" Tag="23"/>
-            <Button Grid.Column="3" Grid.Row="4" Name="b34" Click="ChangeColor" Background="Transparent" Tag="24"/>
-            <Button Grid.Column="4" Grid.Row="4" Name="b44" Click="ChangeColor" Background="Transparent" Tag="25"/>
-            <Button Grid.Column="0" Grid.Row="5" Name="b05" Click="ChangeColor" Background="Transparent" Tag="26"/>
-            <Button Grid.Column="1" Grid.Row="5" Name="b15" Click="ChangeColor" Background="Transparent" Tag="27"/>
-            <Button Grid.Column="2" Grid.Row="5" Name="b25" Click="ChangeColor" Background="Transparent" Tag="28"/>
-            <Button Grid.Column="3" Grid.Row="5" Name="b35" Click="ChangeColor" Background="Transparent" Tag="29"/>
-            <Button Grid.Column="4" Grid.Row="5" Name="b45" Click="ChangeColor" Background="Transparent" Tag="30"/>
-            <Button Grid.Column="0" Grid.Row="6" Name="b06" Click="ChangeColor" Background="Transparent" Tag="31"/>
-            <Button Grid.Column="1" Grid.Row="6" Name="b16" Click="ChangeColor" Background="Transparent" Tag="32"/>
-            <Button Grid.Column="2" Grid.Row="6" Name="b26" Click="ChangeColor" Background="Transparent" Tag="33"/>
-            <Button Grid.Column="3" Grid.Row="6" Name="b36" Click="ChangeColor" Background="Transparent" Tag="34"/>
-            <Button Grid.Column="4" Grid.Row="6" Name="b46" Click="ChangeColor" Background="Transparent" Tag="35"/>
-            <Label Content="Przewidywana liczba: " Grid.Column="4" HorizontalAlignment="Left" Margin="225.2,84.4,-301,0" Grid.Row="5" VerticalAlignment="Top" Width="231" Height="70" Grid.RowSpan="2" FontSize="24"/>
-            <Label x:Name="predictNumber" Content="Brak" Grid.Column="4" HorizontalAlignment="Left" Margin="557.2,84.4,-474,0" Grid.Row="5" VerticalAlignment="Top" Width="72" Height="70" Grid.RowSpan="2" FontSize="24"/>
-            <Button x:Name="addExampleButton" Background="GreenYellow" Content="Dodaj przykład" Grid.Column="4" HorizontalAlignment="Left" Margin="476.2,28,-497,0" VerticalAlignment="Top" Width="176" Height="40" FontSize="20" Click="AddExample"/>
+            <Button Grid.Column="0" Grid.Row="0" Name="b00" Click="ChangeColorClicked" Background="Transparent" Tag="1"/>
+            <Button Grid.Column="1" Grid.Row="0" Name="b10" Click="ChangeColorClicked" Background="Transparent" Tag="2"/>
+            <Button Grid.Column="2" Grid.Row="0" Name="b20" Click="ChangeColorClicked" Background="Transparent" Tag="3"/>
+            <Button Grid.Column="3" Grid.Row="0" Name="b30" Click="ChangeColorClicked" Background="Transparent" Tag="4"/>
+            <Button Grid.Column="4" Grid.Row="0" Name="b40" Click="ChangeColorClicked" Background="Transparent" Tag="5"/>
+            <Button Grid.Column="0" Grid.Row="1" Name="b01" Click="ChangeColorClicked" Background="Transparent" Tag="6"/>
+            <Button Grid.Column="1" Grid.Row="1" Name="b11" Click="ChangeColorClicked" Background="Transparent" Tag="7"/>
+            <Button Grid.Column="2" Grid.Row="1" Name="b21" Click="ChangeColorClicked" Background="Transparent" Tag="8"/>
+            <Button Grid.Column="3" Grid.Row="1" Name="b31" Click="ChangeColorClicked" Background="Transparent" Tag="9"/>
+            <Button Grid.Column="4" Grid.Row="1" Name="b41" Click="ChangeColorClicked" Background="Transparent" Tag="10"/>
+            <Button Grid.Column="0" Grid.Row="2" Name="b02" Click="ChangeColorClicked" Background="Transparent" Tag="11"/>
+            <Button Grid.Column="1" Grid.Row="2" Name="b12" Click="ChangeColorClicked" Background="Transparent" Tag="12"/>
+            <Button Grid.Column="2" Grid.Row="2" Name="b22" Click="ChangeColorClicked" Background="Transparent" Tag="13"/>
+            <Button Grid.Column="3" Grid.Row="2" Name="b32" Click="ChangeColorClicked" Background="Transparent" Tag="14"/>
+            <Button Grid.Column="4" Grid.Row="2" Name="b42" Click="ChangeColorClicked" Background="Transparent" Tag="15"/>
+            <Button Grid.Column="0" Grid.Row="3" Name="b03" Click="ChangeColorClicked" Background="Transparent" Tag="16"/>
+            <Button Grid.Column="1" Grid.Row="3" Name="b13" Click="ChangeColorClicked" Background="Transparent" Tag="17"/>
+            <Button Grid.Column="2" Grid.Row="3" Name="b23" Click="ChangeColorClicked" Background="Transparent" Tag="18"/>
+            <Button Grid.Column="3" Grid.Row="3" Name="b33" Click="ChangeColorClicked" Background="Transparent" Tag="19"/>
+            <Button Grid.Column="4" Grid.Row="3" Name="b43" Click="ChangeColorClicked" Background="Transparent" Tag="20"/>
+            <Button Grid.Column="0" Grid.Row="4" Name="b04" Click="ChangeColorClicked" Background="Transparent" Tag="21"/>
+            <Button Grid.Column="1" Grid.Row="4" Name="b14" Click="ChangeColorClicked" Background="Transparent" Tag="22"/>
+            <Button Grid.Column="2" Grid.Row="4" Name="b24" Click="ChangeColorClicked" Background="Transparent" Tag="23"/>
+            <Button Grid.Column="3" Grid.Row="4" Name="b34" Click="ChangeColorClicked" Background="Transparent" Tag="24"/>
+            <Button Grid.Column="4" Grid.Row="4" Name="b44" Click="ChangeColorClicked" Background="Transparent" Tag="25"/>
+            <Button Grid.Column="0" Grid.Row="5" Name="b05" Click="ChangeColorClicked" Background="Transparent" Tag="26"/>
+            <Button Grid.Column="1" Grid.Row="5" Name="b15" Click="ChangeColorClicked" Background="Transparent" Tag="27"/>
+            <Button Grid.Column="2" Grid.Row="5" Name="b25" Click="ChangeColorClicked" Background="Transparent" Tag="28"/>
+            <Button Grid.Column="3" Grid.Row="5" Name="b35" Click="ChangeColorClicked" Background="Transparent" Tag="29"/>
+            <Button Grid.Column="4" Grid.Row="5" Name="b45" Click="ChangeColorClicked" Background="Transparent" Tag="30"/>
+            <Button Grid.Column="0" Grid.Row="6" Name="b06" Click="ChangeColorClicked" Background="Transparent" Tag="31"/>
+            <Button Grid.Column="1" Grid.Row="6" Name="b16" Click="ChangeColorClicked" Background="Transparent" Tag="32"/>
+            <Button Grid.Column="2" Grid.Row="6" Name="b26" Click="ChangeColorClicked" Background="Transparent" Tag="33"/>
+            <Button Grid.Column="3" Grid.Row="6" Name="b36" Click="ChangeColorClicked" Background="Transparent" Tag="34"/>
+            <Button Grid.Column="4" Grid.Row="6" Name="b46" Click="ChangeColorClicked" Background="Transparent" Tag="35"/>
+            <Button x:Name="addExampleButton" Background="GreenYellow" Content="Dodaj przykład" Grid.Column="4" HorizontalAlignment="Left" Margin="476.2,28,-497,0" VerticalAlignment="Top" Width="176" Height="40" FontSize="20" Click="AddExampleClicked"/>
             <TextBox x:Name="answerBox" Grid.Column="4" HorizontalAlignment="Left" Height="40" Margin="349.2,28,-242,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="48" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="24"/>
             <Label Content="Odpowiedź:" Grid.Column="4" HorizontalAlignment="Left" Margin="196.2,28,-189,0" VerticalAlignment="Top" Width="148" Height="40" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Predykcje perceptronów: " Grid.Column="4" HorizontalAlignment="Left" Margin="294.2,0.4,-469,0" Grid.Row="1" VerticalAlignment="Top" Width="330" Height="70" FontSize="24" FontWeight="Bold"/>
+            <Label Content="Zero:" Grid.Column="4" HorizontalAlignment="Left" Margin="294.2,54.4,-280,0" Grid.Row="1" VerticalAlignment="Top" Width="141" Height="46" FontSize="24" Grid.RowSpan="2" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label Content="Jeden" Grid.Column="4" HorizontalAlignment="Left" Margin="294.2,14.8,-280,0" Grid.Row="2" VerticalAlignment="Top" Width="141" Height="46" FontSize="24" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label Content="Dwa:" Grid.Column="4" HorizontalAlignment="Left" Margin="294.2,58.8,-280,0" Grid.Row="2" VerticalAlignment="Top" Width="141" Height="46" FontSize="24" Grid.RowSpan="2" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label Content="Trzy:" Grid.Column="4" HorizontalAlignment="Left" Margin="294.2,20,-280,0" Grid.Row="3" VerticalAlignment="Top" Width="141" Height="46" FontSize="24" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label Content="Cztery:" Grid.Column="4" HorizontalAlignment="Left" Margin="294.2,66,-280,0" Grid.Row="3" VerticalAlignment="Top" Width="141" Height="46" FontSize="24" Grid.RowSpan="2" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label Content="Pięć:" Grid.Column="4" HorizontalAlignment="Left" Margin="294.2,26.2,-280,0" Grid.Row="4" VerticalAlignment="Top" Width="141" Height="46" FontSize="24" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label Content="Sześć:" Grid.Column="4" HorizontalAlignment="Left" Margin="294.2,72.2,-280,0" Grid.Row="4" VerticalAlignment="Top" Width="141" Height="46" FontSize="24" Grid.RowSpan="2" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label Content="Siedem:" Grid.Column="4" HorizontalAlignment="Left" Margin="294.2,31.4,-280,0" Grid.Row="5" VerticalAlignment="Top" Width="141" Height="46" FontSize="24" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label Content="Osiem:" Grid.Column="4" HorizontalAlignment="Left" Margin="294.2,77.4,-280,0" Grid.Row="5" VerticalAlignment="Top" Width="141" Height="46" FontSize="24" Grid.RowSpan="2" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label Content="Dziewięć:" Grid.Column="4" HorizontalAlignment="Left" Margin="294.2,38.6,-280,0" Grid.Row="6" VerticalAlignment="Top" Width="141" Height="46" FontSize="24" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label x:Name="isNumber0" Content="Nie" Grid.Column="4" HorizontalAlignment="Left" Margin="441.2,54.4,-426,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Height="46" FontSize="24" Grid.RowSpan="2" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label x:Name="isNumber1" Content="Nie" Grid.Column="4" HorizontalAlignment="Left" Margin="441.2,14.8,-426,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="46" FontSize="24" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label x:Name="isNumber2" Content="Nie" Grid.Column="4" HorizontalAlignment="Left" Margin="441.2,58.8,-426,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="46" FontSize="24" Grid.RowSpan="2" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label x:Name="isNumber3" Content="Nie" Grid.Column="4" HorizontalAlignment="Left" Margin="441.2,20,-426,0" Grid.Row="3" VerticalAlignment="Top" Width="140" Height="46" FontSize="24" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label x:Name="isNumber4" Content="Nie" Grid.Column="4" HorizontalAlignment="Left" Margin="441.2,66,-426,0" Grid.Row="3" VerticalAlignment="Top" Width="140" Height="46" FontSize="24" Grid.RowSpan="2" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label x:Name="isNumber5" Content="Nie" Grid.Column="4" HorizontalAlignment="Left" Margin="441.2,26.2,-426,0" Grid.Row="4" VerticalAlignment="Top" Width="140" Height="46" FontSize="24" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label x:Name="isNumber6" Content="Nie" Grid.Column="4" HorizontalAlignment="Left" Margin="441.2,72.2,-426,0" Grid.Row="4" VerticalAlignment="Top" Width="140" Height="46" FontSize="24" Grid.RowSpan="2" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label x:Name="isNumber7" Content="Nie" Grid.Column="4" HorizontalAlignment="Left" Margin="441.2,31.4,-426,0" Grid.Row="5" VerticalAlignment="Top" Width="140" Height="46" FontSize="24" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label x:Name="isNumber8" Content="Nie" Grid.Column="4" HorizontalAlignment="Left" Margin="441.2,77.4,-426,0" Grid.Row="5" VerticalAlignment="Top" Width="140" Height="46" FontSize="24" Grid.RowSpan="2" BorderBrush="#FF334EBC" BorderThickness="3"/>
+            <Label x:Name="isNumber9" Content="Nie" Grid.Column="4" HorizontalAlignment="Left" Margin="441.2,38.6,-426,0" Grid.Row="6" VerticalAlignment="Top" Width="140" Height="46" FontSize="24" BorderBrush="#FF334EBC" BorderThickness="3"/>
         </Grid>
     </Border>
 </Window>
