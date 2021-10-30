@@ -16,6 +16,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+// Można poprawić wyświetlanie odpowiedzi bo coś jest nie tak.
+
 namespace Perceptrony
 {
     public partial class MainWindow : Window
