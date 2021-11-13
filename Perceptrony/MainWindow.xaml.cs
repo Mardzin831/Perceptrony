@@ -16,8 +16,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-// Można poprawić wyświetlanie odpowiedzi bo coś jest nie tak.
-
 namespace Perceptrony
 {
     public partial class MainWindow : Window
@@ -66,9 +64,9 @@ namespace Perceptrony
         
         public void check(List<List<int>> E, List<int> ans, int perc)
         {
-            int T = -1;
-            int O = -1;
-            double sum = 0;
+            int T;
+            int O;
+            double sum;
             double g = 0;
             for(int k = 0; k < 70; k++)
             {
@@ -113,14 +111,14 @@ namespace Perceptrony
         public void Reverse(List<List<int>> E, int drawn, int reverse)
         {
 
-            //if (E[drawn][reverse] == -1)
-            //{
-            //    E[drawn][reverse] = 1;
-            //}
-            //else
-            //{
-            //    E[drawn][reverse] = -1;
-            //}
+            if (E[drawn][reverse] == -1)
+            {
+                E[drawn][reverse] = 1;
+            }
+            else
+            {
+                E[drawn][reverse] = -1;
+            }
         }
         private List<double> Train(List<List<int>> E, List<int> ans, int perc)
         {
@@ -206,9 +204,10 @@ namespace Perceptrony
            
                 
             }
-            double sum = 0;
+            
             for (int i = 0; i < 10; i++)
             {
+                double sum = 0;
                 for (int j = 1; j < 36; j++)
                 {
                     sum += perceptron[i][j] * example[j - 1];
