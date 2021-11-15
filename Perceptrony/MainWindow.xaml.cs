@@ -124,8 +124,8 @@ namespace Perceptrony
         {
             List<double> w = new List<double>();
             w = Weights(w);
-            List<double> pocket = new List<double>();
-            pocket.AddRange(w);
+            List<double> pocket = new List<double>(w);
+            
             int reverse;
             int drawn;
             int T;
@@ -172,8 +172,7 @@ namespace Perceptrony
                     if(lifespan > record)
                     {
                         record = lifespan;
-                        pocket.Clear();
-                        pocket.AddRange(w);
+                        pocket = new List<double>(w);
                     }
                 }
                 else
