@@ -28,8 +28,8 @@ namespace Perceptrony
         public Random randW = new Random();
         public Random randE = new Random();
         public Random randEj = new Random();
-        public int maxRounds = 1000;
-
+        public int maxRounds = 500;
+        public double percent = 0;
 
         public MainWindow()
         {
@@ -59,7 +59,7 @@ namespace Perceptrony
                 perceptron.Add(Train(examples, answers, i));
                 check(examples, answers, i);
             }
-            
+            Debug.WriteLine("Nauczony w: " + percent / 10 + " %");
         }
         
         public void check(List<List<int>> E, List<int> ans, int perc)
@@ -68,7 +68,7 @@ namespace Perceptrony
             int O;
             double sum;
             double g = 0;
-            for(int k = 0; k < 70; k++)
+            for(int k = 0; k < E.Count(); k++)
             {
                 sum = 0;
                 if (ans[k] == perc)
@@ -98,7 +98,7 @@ namespace Perceptrony
                     g++;
                 }
             }
-            Debug.WriteLine(g / 70 * 100);
+            percent += g / 70 * 100;
         }
         public List<double> Weights(List<double> w)
         {
@@ -191,18 +191,18 @@ namespace Perceptrony
         }
         public void Predictions()
         {
-            Debug.WriteLine("--------------------");
-            Debug.WriteLine("--------------------");
-            for (int i = 0; i < 35; i++)
-            {
-                Debug.Write(example[i] == 1 ? "X" : "-");
-                if ((i + 1) % 5 == 0)
-                {
-                    Debug.WriteLine("");
-                }
+            //Debug.WriteLine("--------------------");
+            //Debug.WriteLine("--------------------");
+            //for (int i = 0; i < 35; i++)
+            //{
+            //    Debug.Write(example[i] == 1 ? "X" : "-");
+            //    if ((i + 1) % 5 == 0)
+            //    {
+            //        Debug.WriteLine("");
+            //    }
            
                 
-            }
+            //}
             
             for (int i = 0; i < 10; i++)
             {
@@ -213,7 +213,7 @@ namespace Perceptrony
                 }
                 if (sum < perceptron[i][0])
                 {
-                    Debug.Write("-");
+                    //Debug.Write("-");
                     switch (i)
                     {
                         case 0:
@@ -261,7 +261,7 @@ namespace Perceptrony
                 }
                 else
                 {
-                    Debug.Write("1");
+                    //Debug.Write("1");
                     switch (i)
                     {
                         case 0:
@@ -307,7 +307,7 @@ namespace Perceptrony
                     }
                 }
             }
-            Debug.WriteLine("");
+            //Debug.WriteLine("");
         }
         private void ChangeColorClicked(object sender, RoutedEventArgs e)
         {
